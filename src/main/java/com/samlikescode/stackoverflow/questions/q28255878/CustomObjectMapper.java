@@ -17,8 +17,9 @@ public class CustomObjectMapper extends ObjectMapper {
     public CustomObjectMapper(boolean normalize) {
         super();
         registerModule(new GraphSONModule(normalize));
-
     }
+
+
 
     @Override
     public void writeValue(JsonGenerator jgen, Object value) throws IOException, JsonGenerationException, JsonMappingException {

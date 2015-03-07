@@ -16,7 +16,11 @@ public class TinkerpopGraphModule extends SimpleModule {
     public TinkerpopGraphModule() {
         super(NAME);
         addSerializer(TinkerGraph.class, new TinkerpopGraphSerializer());
+    }
 
+    @Override
+    public void setupModule(SetupContext context) {
+        super.setupModule(context);
     }
 
     public static class TinkerpopGraphSerializer extends JsonSerializer<TinkerGraph> {
