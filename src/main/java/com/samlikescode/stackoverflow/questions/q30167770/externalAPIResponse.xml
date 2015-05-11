@@ -1,0 +1,12 @@
+<invoice>
+    <some>element</some>
+    <some_other>element</some_other>
+    <currency>USD</currency>
+    <cost>10.42</cost>
+    <breakdown>
+        <item id="1">
+            <description>blah blah</description>
+            <cost>4.21</cost>
+        </item>
+    </breakdown>
+</invoice>

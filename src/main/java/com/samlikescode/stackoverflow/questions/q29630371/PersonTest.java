@@ -38,7 +38,6 @@ package com.samlikescode.stackoverflow.questions.q29630371;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.google.common.collect.FluentIterable;
 import org.junit.Test;
 
 import java.io.IOException;
@@ -108,7 +107,7 @@ public class PersonTest {
 //        assertFalse(json.contains("index"));
         System.out.println(json);
 
-        FluentIterable.from().toMap()
+//        FluentIterable.from().toMap()
     }
 
 
