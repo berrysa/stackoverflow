@@ -36,44 +36,11 @@
 */
 package com.samlikescode.stackoverflow.questions.q29630371;
 
-//@JsonIgnoreProperties({"index", "dbPropertyA", "dbPropertyB"})
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+    @JsonIgnoreProperties({"index", "dbPropertyA", "dbPropertyB"})
     public class Person extends DbItem {
-        private String index;
-        private String firstName;
-        private String lastName;
-
-        public Person(String dbPropertyA, String dbPropertyB) {
-            super(dbPropertyA, dbPropertyB);
-        }
-
-        public Person(String dbPropertyA, String dbPropertyB, String index, String firstName, String lastName) {
-            super(dbPropertyA, dbPropertyB);
-            this.index = index;
-            this.firstName = firstName;
-            this.lastName = lastName;
-        }
-
-        public String getIndex() {
-            return index;
-        }
-
-        public void setIndex(String index) {
-            this.index = index;
-        }
-
-        public String getFirstName() {
-            return firstName;
-        }
-
-        public void setFirstName(String firstName) {
-            this.firstName = firstName;
-        }
-
-        public String getLastName() {
-            return lastName;
-        }
-
-        public void setLastName(String lastName) {
-            this.lastName = lastName;
-        }
+        public String index;
+        public String firstName;
+        public String lastName;
     }

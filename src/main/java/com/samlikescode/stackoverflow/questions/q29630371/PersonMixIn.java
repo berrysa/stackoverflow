@@ -40,7 +40,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 
 //    PersonMixIn(@JsonProperty("birthday") String birthday, @JsonProperty("middleName") String middleName) { }
     public abstract class PersonMixIn {
-        @JsonIgnore abstract String getDbPropertyA();
-        @JsonIgnore abstract String getDbPropertyB();
-        @JsonIgnore abstract String getIndex();
+        @JsonIgnore public String dbPropertyA;
+        @JsonIgnore public String dbPropertyB;
+        @JsonIgnore public String index;
     }

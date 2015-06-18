@@ -37,27 +37,6 @@
 package com.samlikescode.stackoverflow.questions.q29630371;
 
     public class DbItem {
-        private String dbPropertyA;
-        private String dbPropertyB;
-
-        public DbItem(String dbPropertyA, String dbPropertyB) {
-            this.dbPropertyA = dbPropertyA;
-            this.dbPropertyB = dbPropertyB;
-        }
-
-        public String getDbPropertyA() {
-            return dbPropertyA;
-        }
-
-        public void setDbPropertyA(String dbPropertyA) {
-            this.dbPropertyA = dbPropertyA;
-        }
-
-        public String getDbPropertyB() {
-            return dbPropertyB;
-        }
-
-        public void setDbPropertyB(String dbPropertyB) {
-            this.dbPropertyB = dbPropertyB;
-        }
+        public String dbPropertyA;
+        public String dbPropertyB;
     }
