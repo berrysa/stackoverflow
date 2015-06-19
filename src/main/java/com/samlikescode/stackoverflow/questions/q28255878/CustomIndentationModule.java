@@ -51,7 +51,6 @@ public class CustomIndentationModule extends SimpleModule {
             @Override
             public JsonSerializer<?> modifySerializer(SerializationConfig config, BeanDescription beanDesc, JsonSerializer<?> serializer) {
 
-
                 return super.modifySerializer(config, beanDesc, serializer);
             }
         });

@@ -14,7 +14,7 @@ public class CustomObjectTest {
         customObject.attribute = "attr";
 
     XmlMapper xm = new XmlMapper();
-    xm.registerModule(new GsaFeedModule());
+//    xm.registerModule(new GsaFeedModule());
 
         String xml = xm.writeValueAsString(customObject);
 

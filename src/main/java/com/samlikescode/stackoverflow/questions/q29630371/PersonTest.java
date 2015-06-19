@@ -36,79 +36,71 @@
 */
 package com.samlikescode.stackoverflow.questions.q29630371;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import org.junit.Test;
-
-import java.io.IOException;
-
-import static org.junit.Assert.assertFalse;
-
 public class PersonTest {
-
-    @Test
-    public void serializePersonTest() throws JsonProcessingException {
-        // set up test data including parent properties
-        Person person = new Person("Database property 1", "Database property 2");
-        person.setIndex("1");
-        person.setFirstName("Joe");
-        person.setLastName("Bob");
-
-        // register the mix in
-        ObjectMapper om = new ObjectMapper()
-                .addMixIn(Person.class, PersonMixIn.class);
-
-        // translate object to JSON string using Jackson
-        String json = om.writeValueAsString(person);
-
-        assertFalse(json.contains("dbPropertyA"));
-        assertFalse(json.contains("dbPropertyB"));
-        assertFalse(json.contains("index"));
-        System.out.println(json);
-    }
-
-    @Test
-    public void serializePerson2Test() throws JsonProcessingException {
-        // set up test data including parent properties
-        Person person = new Person("Database property 1", "Database property 2");
-        person.setIndex("1");
-        person.setFirstName("Joe");
-        person.setLastName("Bob");
-
-        // register the mix in
+//
+//    @Test
+//    public void serializePersonTest() throws JsonProcessingException {
+//        // set up test data including parent properties
+//        Person person = new Person("Database property 1", "Database property 2");
+//        person.setIndex("1");
+//        person.setFirstName("Joe");
+//        person.setLastName("Bob");
+//
+//        // register the mix in
 //        ObjectMapper om = new ObjectMapper()
 //                .addMixIn(Person.class, PersonMixIn.class);
-        ObjectMapper om = new ObjectMapper();
-
-        // translate object to JSON string using Jackson
-        String json = om.writeValueAsString(person);
-
-//        assertFalse(json.contains("dbPropertyA"));
-//        assertFalse(json.contains("dbPropertyB"));
-//        assertFalse(json.contains("index"));
-        System.out.println(json);
-    }
-
-    @Test
-    public void deserializePersonTest() throws IOException {
-        String json = "{\"dbPropertyA\":\"Database property 1\",\"dbPropertyB\":\"Database property 2\",\"index\":\"1\",\"firstName\":\"Joe\",\"lastName\":\"Bob\"}";
-
-        // register the mix in
-        ObjectMapper om = new ObjectMapper()
-                .addMixIn(Person.class, PersonMixIn.class);
-
-        Person person = om.readValue(json, Person.class);
-
-        // translate object to JSON string using Jackson
+//
+//        // translate object to JSON string using Jackson
 //        String json = om.writeValueAsString(person);
-
+//
 //        assertFalse(json.contains("dbPropertyA"));
 //        assertFalse(json.contains("dbPropertyB"));
 //        assertFalse(json.contains("index"));
-        System.out.println(json);
-
-//        FluentIterable.from().toMap()
-    }
-
-
+//        System.out.println(json);
+//    }
+//
+//    @Test
+//    public void serializePerson2Test() throws JsonProcessingException {
+//        // set up test data including parent properties
+//        Person person = new Person("Database property 1", "Database property 2");
+//        person.setIndex("1");
+//        person.setFirstName("Joe");
+//        person.setLastName("Bob");
+//
+//        // register the mix in
+////        ObjectMapper om = new ObjectMapper()
+////                .addMixIn(Person.class, PersonMixIn.class);
+//        ObjectMapper om = new ObjectMapper();
+//
+//        // translate object to JSON string using Jackson
+//        String json = om.writeValueAsString(person);
+//
+////        assertFalse(json.contains("dbPropertyA"));
+////        assertFalse(json.contains("dbPropertyB"));
+////        assertFalse(json.contains("index"));
+//        System.out.println(json);
+//    }
+//
+//    @Test
+//    public void deserializePersonTest() throws IOException {
+//        String json = "{\"dbPropertyA\":\"Database property 1\",\"dbPropertyB\":\"Database property 2\",\"index\":\"1\",\"firstName\":\"Joe\",\"lastName\":\"Bob\"}";
+//
+//        // register the mix in
+//        ObjectMapper om = new ObjectMapper()
+//                .addMixIn(Person.class, PersonMixIn.class);
+//
+//        Person person = om.readValue(json, Person.class);
+//
+//        // translate object to JSON string using Jackson
+////        String json = om.writeValueAsString(person);
+//
+////        assertFalse(json.contains("dbPropertyA"));
+////        assertFalse(json.contains("dbPropertyB"));
+////        assertFalse(json.contains("index"));
+//        System.out.println(json);
+//
+////        FluentIterable.from().toMap()
+//    }
+//
+//
 }
