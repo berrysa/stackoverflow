@@ -1,0 +1,11 @@
+[
+    {
+        "Lorem Ipsum ": 4
+    },
+    {
+        "Lorem Ipsum ":5
+    },
+    {
+        "keyToRemove": "value"
+    }
+]
