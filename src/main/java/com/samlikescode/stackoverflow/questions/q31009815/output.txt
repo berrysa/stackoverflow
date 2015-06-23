@@ -1,0 +1,35 @@
+    // Full container
+    {
+      "description" : "an awesome description",
+      "element1" : {
+        "f11" : "f11 value",
+        "f12" : "f12 value"
+      },
+      "element2" : {
+        "f21" : "f21 value",
+        "f22" : "f22 value"
+      }
+    }
+
+    // Null Element1 properties
+    {
+      "description" : "an awesome description",
+      "element2" : {
+        "f21" : "f21 value",
+        "f22" : "f22 value"
+      }
+    }
+
+    // Null Element2 properties
+    {
+      "description" : "an awesome description",
+      "element1" : {
+        "f11" : "f11 value",
+        "f12" : "f12 value"
+      }
+    }
+
+    // Null Element1 and 2 properties
+    {
+      "description" : "an awesome description"
+    }

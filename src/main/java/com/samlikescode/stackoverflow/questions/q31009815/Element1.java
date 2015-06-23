@@ -34,39 +34,12 @@
 *     All patent, copyright, trademark and other intellectual property rights
 *     included in the source code are owned exclusively by Vertafore, Inc.
 */
-package com.samlikescode.stackoverflow.questions.q30979488;
+package com.samlikescode.stackoverflow.questions.q31009815;
 
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonProperty;
-
-public class MessagePojo {
-    private final Member sender;
-    private final Member recipient;
-
-    @JsonCreator
-    public MessagePojo(@JsonProperty("sender") Member sender,
-                       @JsonProperty("recipient") Member recipient) {
-        this.sender = sender;
-        this.recipient = recipient;
-    }
-
-    @JsonProperty("senderId")
-    public Long getSenderId() {
-        return sender.getId();
-    }
-
-    @JsonProperty("recipientId")
-    public Long getRecipientId() {
-        return recipient.getId();
-    }
-
-    @JsonProperty("senderFirstName")
-    public String getSenderFirstName() {
-        return sender.getFirstName();
-    }
-
-    @JsonProperty("recipientFirstName")
-    public String getRecipientFirstName() {
-        return recipient.getFirstName();
-    }
+/**
+ * //todo(sb)
+ */
+public class Element1 {
+    String f11;
+    String f12;
 }
