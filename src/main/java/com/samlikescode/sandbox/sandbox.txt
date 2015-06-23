@@ -1,1 +1,0 @@
-Transfer Code = {Project Transfer Code} + {Activity Transfer Code}
