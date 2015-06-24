@@ -34,10 +34,23 @@
 *     All patent, copyright, trademark and other intellectual property rights
 *     included in the source code are owned exclusively by Vertafore, Inc.
 */
-package com.samlikescode.stackoverflow.questions.q31009815;
+package com.samlikescode.stackoverflow.questions.q30973293;
+
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * //todo(sb)
  */
-public class ContainerModule {
+public class RequestObject {
+    private final Integer input;
+
+    @JsonCreator
+    public RequestObject(@JsonProperty("input") String inputString) {
+        this.input = Integer.parseInt(inputString);
+    }
+
+    public Integer getInput() {
+        return input;
+    }
 }

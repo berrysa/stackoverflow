@@ -36,8 +36,55 @@
 */
 package com.samlikescode.stackoverflow.questions.q31009815;
 
-/**
- * //todo(sb)
- */
-public class ContainerModule {
+import com.fasterxml.jackson.core.JsonGenerator;
+import com.fasterxml.jackson.databind.JsonSerializer;
+import com.fasterxml.jackson.databind.SerializerProvider;
+import com.fasterxml.jackson.databind.module.SimpleModule;
+import com.google.common.base.Strings;
+
+import java.io.IOException;
+
+public class ContainerModule2 extends SimpleModule {
+    private static final String NAME = "ContainerModule";
+
+    public ContainerModule2() {
+        super(NAME);
+        addSerializer(Container.class, new ContainerSerializer());
+    }
+
+    public static class ContainerSerializer extends JsonSerializer<Container> {
+        @Override
+        public void serialize(Container container, JsonGenerator jg, SerializerProvider serializers) throws IOException {
+            if (container != null) {
+                // start object and write description
+                jg.writeStartObject();
+                jg.writeStringField("description", container.description);
+
+                // only write Element1 if one of its members exist
+                Element1 element1 = container.element1;
+                if (element1 != null) {
+                    if (!Strings.isNullOrEmpty(element1.f11)
+                            && !Strings.isNullOrEmpty(element1.f12)) {
+                        jg.writeFieldName("element1");
+                        jg.writeObject(element1);
+                    }
+                }
+
+                // only write Element2 if one of its members exist
+                Element2 element2 = container.element2;
+                if (element2 != null) {
+                    if (!Strings.isNullOrEmpty(element2.f21)
+                            && !Strings.isNullOrEmpty(element2.f22)) {
+                        jg.writeFieldName("element2");
+                        jg.writeObject(element2);
+                    }
+                }
+
+                // close the Container object
+                jg.writeEndObject();
+            }
+        }
+    }
 }
+
+

@@ -34,10 +34,26 @@
 *     All patent, copyright, trademark and other intellectual property rights
 *     included in the source code are owned exclusively by Vertafore, Inc.
 */
-package com.samlikescode.stackoverflow.questions.q31009815;
+package com.samlikescode.stackoverflow.questions.q30999663;
+
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import org.junit.Test;
 
 /**
  * //todo(sb)
  */
-public class ContainerModule {
+public class DataSerializerTest {
+    @Test
+    public void testDataSerialization() throws JsonProcessingException {
+        ObjectMapper om = new ObjectMapper();
+
+        Data d = new Data();
+        d.x = 9878989l;
+        d.y = 7887676l;
+
+        String output  = om.writeValueAsString(d);
+
+        System.out.println(output);
+    }
 }

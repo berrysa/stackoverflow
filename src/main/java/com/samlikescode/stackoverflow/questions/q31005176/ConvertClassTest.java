@@ -34,10 +34,26 @@
 *     All patent, copyright, trademark and other intellectual property rights
 *     included in the source code are owned exclusively by Vertafore, Inc.
 */
-package com.samlikescode.stackoverflow.questions.q31009815;
+package com.samlikescode.stackoverflow.questions.q31005176;
+
+import org.junit.Test;
+
+import java.math.BigInteger;
 
 /**
  * //todo(sb)
  */
-public class ContainerModule {
+public class ConvertClassTest {
+
+    @Test
+    public void testJacksonConvert() {
+        int i = 7773777;
+
+        BigInteger i2 = BigInteger.valueOf(i * 502342300);
+
+        int i3 = i * 502342300;
+        long i4 = (long) i * 502342300;
+
+        int hhh = 0;
+    }
 }

@@ -34,10 +34,15 @@
 *     All patent, copyright, trademark and other intellectual property rights
 *     included in the source code are owned exclusively by Vertafore, Inc.
 */
-package com.samlikescode.stackoverflow.questions.q31009815;
+package com.samlikescode.stackoverflow.questions.q30999663;
+
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 
 /**
  * //todo(sb)
  */
-public class ContainerModule {
+@JsonSerialize(using = DataSerializer.class)
+public class Data {
+    public long x;
+    public long y;
 }

@@ -50,7 +50,7 @@ public class ContainerTest {
     @Test
     public void testContainerSerialization_ObjectMapperConfig() throws JsonProcessingException {
     ObjectMapper om = new ObjectMapper()
-            .registerModule(new ContainerModule())
+            .registerModule(new ContainerModule2())
             .setVisibility(PropertyAccessor.ALL, JsonAutoDetect.Visibility.ANY);
 
         ObjectWriter objectWriter = om.writerWithDefaultPrettyPrinter();

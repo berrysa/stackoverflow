@@ -34,10 +34,23 @@
 *     All patent, copyright, trademark and other intellectual property rights
 *     included in the source code are owned exclusively by Vertafore, Inc.
 */
-package com.samlikescode.stackoverflow.questions.q31009815;
+package com.samlikescode.stackoverflow.questions.q30999663;
+
+import com.fasterxml.jackson.core.JsonGenerator;
+import com.fasterxml.jackson.databind.JsonSerializer;
+import com.fasterxml.jackson.databind.SerializerProvider;
+
+import java.io.IOException;
 
 /**
  * //todo(sb)
  */
-public class ContainerModule {
+public class DataSerializer extends JsonSerializer<Data> {
+    @Override
+    public void serialize(Data data, JsonGenerator jg, SerializerProvider serializers) throws IOException {
+        jg.writeStartObject();
+        jg.writeFieldName(Long.toString(data.x));
+        jg.writeFieldName(Long.toString(data.y));
+        jg.writeEndObject();
+    }
 }

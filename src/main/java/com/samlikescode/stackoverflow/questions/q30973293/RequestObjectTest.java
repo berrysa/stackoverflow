@@ -34,10 +34,23 @@
 *     All patent, copyright, trademark and other intellectual property rights
 *     included in the source code are owned exclusively by Vertafore, Inc.
 */
-package com.samlikescode.stackoverflow.questions.q31009815;
+package com.samlikescode.stackoverflow.questions.q30973293;
+
+import com.fasterxml.jackson.databind.ObjectMapper;
+import org.junit.Test;
+
+import java.io.IOException;
 
 /**
  * //todo(sb)
  */
-public class ContainerModule {
+public class RequestObjectTest {
+    @Test
+    public void testLargeNumberInput() throws IOException {
+        ObjectMapper om = new ObjectMapper();
+
+        RequestObject ro = om.readValue("{\"input\": 676376737636376736763}", RequestObject.class);
+
+        int i = 0;
+    }
 }
