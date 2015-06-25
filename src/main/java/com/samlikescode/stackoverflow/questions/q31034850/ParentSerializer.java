@@ -45,6 +45,5 @@ import java.io.IOException;
 public class ParentSerializer extends JsonSerializer<Parent> {
     @Override
     public void serialize(Parent value, JsonGenerator gen, SerializerProvider serializers) throws IOException {
-
     }
 }

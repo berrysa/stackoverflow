@@ -36,8 +36,6 @@
 */
 package com.samlikescode.stackoverflow.questions.q31009815;
 
-import com.fasterxml.jackson.annotation.JsonAutoDetect;
-import com.fasterxml.jackson.annotation.PropertyAccessor;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.ObjectWriter;
@@ -50,9 +48,9 @@ public class ContainerTest {
     @Test
     public void testContainerSerialization_ObjectMapperConfig() throws JsonProcessingException {
     ObjectMapper om = new ObjectMapper()
-            .registerModule(new ContainerModule2())
+            .registerModule(new ContainerModule2());
 //            .registerModule(new Element1Module())
-            .setVisibility(PropertyAccessor.ALL, JsonAutoDetect.Visibility.ANY);
+//            .setVisibility(PropertyAccessor.ALL, JsonAutoDetect.Visibility.ANY);
 
         ObjectWriter objectWriter = om.writerWithDefaultPrettyPrinter();
         System.out.println("Full container: " + objectWriter.writeValueAsString(buildFakeContainerFull()));

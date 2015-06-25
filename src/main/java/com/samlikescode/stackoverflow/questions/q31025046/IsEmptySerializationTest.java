@@ -28,11 +28,11 @@ public class IsEmptySerializationTest {
         System.out.println("Config: " + om.writeValueAsString(new MyClassContainer()));
     }
 
-    private List<MySpecificClass> getMySpecificClassList() {
-        MySpecificClass myClass = new MySpecificClass();
+    private List<MyClass> getMySpecificClassList() {
+        MyClass myClass = new MyClass();
         myClass.description = "yay a description";
         myClass.id = 123;
-        MySpecificClass myEmptyClass = new MySpecificClass();
+        MyClass myEmptyClass = new MyClass();
         myEmptyClass.description = "yay a description";
         myEmptyClass.id = null;
         return Lists.newArrayList(myClass, myEmptyClass);

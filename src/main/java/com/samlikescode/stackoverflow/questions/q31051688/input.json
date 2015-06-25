@@ -1,0 +1,22 @@
+{
+    "status": {
+        "status": 200,
+        "msg": "SUCCESS"
+    },
+    "apicalls": [
+        {
+            "API": {
+                "method": "get",
+                "success": "200",
+                "baseURL": "http://api.statdns.com/",
+                "param1": "google.com/",
+                "param2": "cname",
+                "continue_on_fail": "1",
+                "add_header2": "'Accept', 'application/json'",
+                "add_header1": "'Content-Type', 'application/json'",
+                "client_id": "101"
+            },
+            "id": 1385
+        }
+    ]
+}
