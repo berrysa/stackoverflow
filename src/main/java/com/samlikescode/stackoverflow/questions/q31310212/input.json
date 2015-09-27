@@ -1,0 +1,19 @@
+{
+    "geometry": {
+        "location": {
+            "lat": 75.22404,
+            "lng": 57.42276
+        },
+        "viewport": {
+            "northeast": {
+                "lat": 95.2353532,
+                "lng": 75.4427513
+            },
+            "southwest": {
+                "lat": 55.207256,
+                "lng": 45.4045009
+            }
+        }
+    },
+    "vicinity": "something"
+}

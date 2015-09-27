@@ -27,6 +27,8 @@ return myAnimal:
 
  */
 public class AnimalDeserializer extends JsonDeserializer<Animal> {
+//    private final JsonDeserializer<Object> defaultDeserializer;
+
     @Override
     public Animal deserialize(JsonParser jp, DeserializationContext ctxt) throws IOException {
 //        if (!jp.isClosed()) {
