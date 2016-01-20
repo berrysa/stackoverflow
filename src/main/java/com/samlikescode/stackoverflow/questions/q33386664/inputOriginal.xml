@@ -1,0 +1,14 @@
+<data>
+    <list>
+        <item>
+            <groupId>1</groupId>
+            <eventId>1</eventId>
+            <value>1</value>
+        </item>
+        <item>
+            <groupId>2</groupId>
+            <eventId>3</eventId>
+            <value>2</value>
+        </item>
+    </list>
+</data>
